@@ -1,0 +1,1256 @@
+/* =============================================
+1. ESTILOS GERAIS E FONTES
+============================================= */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Absolut', sans-serif;
+    background-image: url("Background/mobile_background_v2.png");
+    background-repeat: repeat;
+    color: #f0f0f0;
+    width: 100%;
+    overflow-x: hidden; /* <-- ADICIONE: Impede a rolagem horizontal */
+
+
+}
+
+body {
+    padding-top: 40px;
+}
+
+@font-face { font-family: 'AbsolutHeadline'; src: url('fonts/absolut-headline.woff2') format('woff2'); }
+@font-face { font-family: 'Absolut'; src: url('fonts/absolut-regular.woff') format('woff'); }
+@font-face { font-family: 'AbsolutHandwritten'; src: url('fonts/absolut-handwritten-regular.woff') format('woff'); }
+@font-face { font-family: "EdwardianScript"; src: url("fonts/Edwardian Script ITC V1.woff2") format("woff2"); }
+
+/* =============================================
+2. HEADER / NAVBAR
+============================================= */
+.barra_cima {
+    width: 100%;
+    height: 30px;
+    background: url("BARRA_CIMA.avif") center/cover no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo-row {
+    width: 200px; /* Largura da área da logo */
+    
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 24px; 
+    width: auto; 
+    margin-bottom: 2px;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    top: 40px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+}
+.menu.active {
+    display: flex;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+
+/* =============================================
+3. HERO BANNER (.CROP SECTION)
+============================================= */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 177.78%; /* ANTES: 56.25% */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video_demolimpiadas{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.crop {
+    padding-bottom: 30px;
+    text-align: center;
+    background-color: #fff;
+}
+.foto_churrasco_ex {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.titulo-rep-demoro {
+    padding: 0 15px;
+    margin-bottom: 0px;
+    font-size: clamp(28px, 8vw, 40px);
+    line-height: 1.2;
+    color: #111;
+}
+.titulo-rep-demoro .fonte-sobre { font-family: 'AbsolutHeadline'; }
+.titulo-rep-demoro .fonte-nos { font-family: 'AbsolutHandwritten'; }
+.titulo-rep-demoro .fonte-moderacao { 
+    font-family: 'Absolut';
+    font-size: clamp(16px, 1vw, 3px); 
+}
+
+.titulo-rep-demoro span { display: block; }
+.titulo-sobre-nos .fonte-sobre { font-family: 'AbsolutHeadline'; }
+.titulo-sobre-nos .fonte-nos { font-family: 'AbsolutHandwritten'; }
+.titulo-sobre-nos span { display: block; }
+
+/* =============================================
+4. SEÇÃO SOBRE NÓS
+============================================= */
+
+.sobre-nos-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+.titulo-sobre-nos {
+    font-size: clamp(28px, 8vw, 40px);
+    margin-bottom: 1rem;
+    
+}
+.sobre-nos {
+    font-size: clamp(16px, 3vw, 20px);    
+    color: #eeeeee;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* =============================================
+5. SEÇÃO NOSSOS EVENTOS
+============================================= */
+
+.eventos-section {
+}
+.titulo-nossos-eventos {
+    font-family: 'AbsolutHeadline';
+    text-align: center;
+    font-size: clamp(32px, 8vw, 45px);
+    margin-bottom: 2rem;
+    padding: 0 20px;
+}
+.sobre-torneio-interrep, .sobre-a-festa {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+.conteudo-texto, .conteudo-texto-festa {
+    order: 1;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.fotos-interrep, .fotos-a-festa {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fotos-interrep figure, .fotos-a-festa figure {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+}
+.fotos-interrep figure img, .fotos-a-festa figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.logo-torneio-interrep, .logo-a-festa {
+    max-width: 250px;
+    margin: 0 auto 20px auto;
+}
+.texto-torneio-interrep, .texto-a-festa {
+    font-size: clamp(16px, 4vw, 18px);
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+/* =============================================
+6. SEÇÃO CHURRASCO DOS PAIS
+============================================= */
+
+.sobre-churras-dos-pais {
+    padding: 0px;
+    text-align: center;
+    background-color: #fff;
+    color: #333;
+}
+.background-churras-pais img {
+    width: 100%;
+    height: auto;
+}
+.conteudo-churras-pais {
+}
+.conteudo-churras-pais .titulo-churras-pais{
+font-family: 'AbsolutHeadline';
+font-size: clamp(32px, 8vw, 50px);
+}
+.conteudo-churras-pais .muito-mais-rep {
+    font-family: 'AbsolutHandwritten';
+    font-size: clamp(32px, 8vw, 60px);
+}
+.conteudo-churras-pais .texto-churras-pais {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 15px auto;
+    line-height: 1.6;
+}
+
+
+.sobre-churras-ex-moradores {
+    padding: 0px;
+    text-align: center;
+    background-color: #fff;
+    color: #333;
+}
+.background-churras-ex-moradores img {
+    width: 100%;
+    height: auto;
+}
+.conteudo-churras-ex-moradores {
+    position: relative; /* necessário para conter elementos absolutos */
+    padding-bottom: 40px;
+}
+.conteudo-churras-ex-moradores .titulo-churras-ex-moradores{
+font-family: 'AbsolutHeadline';
+font-size: clamp(32px, 8vw, 50px);
+
+}
+.conteudo-churras-ex-moradores .muito-mais-rep {
+    font-family: 'AbsolutHandwritten';
+    font-size: clamp(32px, 8vw, 60px);
+    position: absolute;
+    left: 80%;
+    top: 80%;
+    transform: translate(-50%, -50%); /* centraliza relativo ao ponto */
+    white-space: nowrap; /* evita quebrar */
+    pointer-events: none;
+}
+.conteudo-churras-ex-moradores .texto-churras-ex-moradores {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 15px auto;
+    line-height: 1.6;
+}
+
+/* =============================================
+7. SEÇÃO MORADORES
+============================================= */
+
+.moradores {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-moradores {
+    color: whitesmoke;
+    font-family: 'AbsolutHandwritten';
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cards-moradores {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    gap: 30px;
+}
+
+.morador {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 360px;
+    flex: 1 1 100%;
+    position: relative;
+    cursor: pointer;
+    transition: flex 0.3s ease-in-out;
+    overflow: hidden;
+    border-radius: 8px;
+    
+}
+
+.morador figcaption {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: 'AbsolutHandwritten', sans-serif;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.morador.active {
+    flex: 2;
+}
+
+.morador.active figcaption {
+    opacity: 1;
+    font-size: 1.2rem;
+    padding-bottom: 18px;
+}
+
+@media (min-width: 600px) {
+    .cards-moradores {
+        flex-direction: row;
+    }
+    .morador {
+        height: 40vw;
+        min-height: 220px;
+        flex: 0.5;
+    }
+    .morador.active {
+        flex: 2;
+    }
+    .morador figcaption {
+        font-size: 1.1rem;
+        padding-bottom: 16px;
+    }
+}
+
+
+
+.titulo-nossa-casa {
+    font-family: 'AbsolutHeadline';
+    text-align: center;
+    font-size: clamp(32px, 8vw, 45px);
+    margin-bottom: 2rem;
+    padding: 0 20px;
+}
+
+.sobre-casa{
+    display: flex;
+    justify-content: center;
+    flex-direction: row; 
+    border: 2px solid black; 
+    border-radius: 10%;
+}
+
+.conteudo-casa {
+    order: 2;
+    text-align: center;
+    background: url('Background/white_background.png');
+    flex: 1 1 50%;
+    padding: 1vw 2vw;
+    border: black;
+    cursor: pointer;
+    font-size: 5vw;
+    font-family: 'AbsolutHandwritten';
+    transition-duration: 0.4s;
+}
+
+.conteudo-casa:hover{
+    background: url('Background/background_v4.png');
+    color: white;
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
+}
+
+.fade-in-element {
+opacity: 0;
+transform: translateY(30px);
+transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Estado final: O elemento fica visível na sua posição original */
+.fade-in-element.is-visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+.foto-casa {
+    order: 1;
+}
+.foto-casa figure{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0;
+    overflow: auto;
+    box-shadow:0 8px 16px 0 rgba(0,0,0,1)
+}
+.foto-casa figure img{
+    width: 100%;
+    height: auto;
+}
+
+.fundo-index {
+    background-color: white !important; /* !important garante que ganhe de outros estilos */
+    min-height: 100vh; /* Ocupa 100% da altura da tela visível */
+    width: 100%;       /* Ocupa 100% da largura */
+    
+    /* Garante que comece do topo, cobrindo tudo */
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 0; /* Fica atrás do conteúdo, mas na frente do body */
+}
+
+.texto-universidade .fonte-vida { font-family: 'AbsolutHeadline'; }
+.texto-universidade .fonte-universitaria { font-family: 'AbsolutHandwritten'; }
+/* --- Container Principal (Opcional, para dar espaço) --- */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;  
+}
+
+/* --- Texto --- */
+.container-text-index {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.texto-universidade {
+    margin: 0;
+}
+
+.texto-universidade span { 
+    display: block;
+    color: #1c1cb8;
+    font-size: 5vw;
+    line-height: 1.2;
+}
+
+
+.container-botao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;       
+    width: 100%;
+    margin-top: 30px;
+}
+
+.botao-conhecer{
+    background-color: #1c21b8; 
+    color: white;
+    border: none;
+    
+    padding: 20px 60px;     
+    font-size: 1.5rem;
+    
+    cursor: pointer;
+    transition: transform 0.2s;
+    font-family: 'Absolut';
+} 
+.botao-morador {
+    background-color: transparent; 
+    border: 2px solid #1c21b8;
+    color: #1c21b8; 
+    
+    padding: 10px 30px;
+    font-size: 1rem;
+    
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Absolut';
+}
+
+/* Efeito Hover (Opcional: muda cor ao passar o mouse) */
+.botao-conhecer:hover{
+    transform: scale(1.05); 
+    background-color: #000471;
+}
+.botao-morador:hover {
+background-color: #f0f0f0;
+}
+
+
+
+
+/*===================
+    LOGIN MORADOR
+====================*/
+
+.fundo-login {
+    background-color: white !important;
+    min-height: 100vh;
+    width: 100%;
+    
+    display: flex; 
+    flex-direction: column; /* Coloca Header em cima, Hero embaixo */
+    
+    box-sizing: border-box; 
+    
+}
+
+.formulario-login {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;       /* Garante que ocupe o espaço */
+    max-width: 300px;  /* Mas trava em 300px */
+}
+
+.titulo-login{
+    font-family: 'AbsolutHandwritten';
+    font-size: 10vw;
+    color:#000471; 
+}
+
+.sem-conta{
+    font-family: 'Absolut';
+    font-size: 1vw;
+    color:#000471; 
+}
+
+.input-padrao {
+    padding: 12px;           
+    border: 2px solid #000471; 
+    border-radius: 0px;      
+    font-size: 16px;
+    outline: none;           
+}
+
+.input-padrao:focus {
+    background-color: #f0f8ff; 
+}
+
+.botao-entrar {
+    padding: 12px;
+    background-color: #000471;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.container-tarefa {
+    display: flex;
+    flex-direction: column; /* MOBILE: Um embaixo do outro */
+    align-items: center;    /* Centraliza */
+    gap: 15px;              /* Espaço entre caixa e checkbox */
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.box-tarefas {
+    background-color: #f9f9f9; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+    padding: 15px;
+    
+    /* Tamanho no Mobile */
+    width: 90%; /* Ocupa a tela quase toda */
+    max-width: 400px;
+    
+    /* Alinhamento do texto */
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+}
+.box-tarefas span {
+    font-family: 'Absolut', sans-serif; /* Ou sua fonte preferida */
+    font-size: 1rem; /* Legível no celular */
+    color: #242424;
+    line-height: 1.5;
+}
+
+.checkbox-tarefa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.tarefas{
+    display: flex;
+    justify-content: center;
+}
+.texto-tarefas{
+    font-family: 'AbsolutHandwritten';
+    font-size: 3rem;
+    color: #000471;
+    margin-top: 10%;
+
+}
+
+.page-morador{
+    background-color: white;
+    min-height: 100vh; /* Ocupa 100% da altura da tela visível */
+    width: 100%;       /* Ocupa 100% da largura */
+    
+    /* Garante que comece do topo, cobrindo tudo */
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 0; /* Fica atrás do conteúdo, mas na frente do body */
+}
+
+.ola-morador{
+
+}
+
+.pagina-admin {
+    overflow-y: auto; 
+    padding: 20px;
+    align-items: center; /* Centraliza o conteúdo no desktop */
+}
+
+.titulo-admin{
+    font-family: 'AbsolutHandwritten';
+    font-size: 10vw;
+    color:#000471; 
+}
+
+.hero-admin {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 600px; /* Limita a largura para não ficar muito esticado no PC */
+    background-color: white; /* Garante fundo branco se o fundo-login falhar */
+    padding-bottom: 50px;
+}
+
+.subtitulo-admin {
+    color: #000471;
+    font-family: 'Absolut';
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-admin {
+    max-width: 100%; /* Ocupa a largura do container pai */
+}
+
+/* Linha divisória */
+.divisor-admin {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 30px 0;
+}
+
+.titulo-lista-admin {
+    font-family: 'AbsolutHandwritten';
+    font-size: 3rem;
+    color: #000471;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Container da Lista */
+.lista-admin-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Cada Item da Lista */
+.item-tarefa-admin {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.info-tarefa-admin {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-tarefa-admin strong {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.info-tarefa-admin small {
+    color: #666;
+    margin-top: 4px;
+}
+
+/* Botão de Deletar (Vermelho) */
+.botao-deletar-admin {
+    background-color: #dc3545; /* Vermelho padrão de erro */
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.botao-deletar-admin:hover {
+    background-color: #c82333; /* Vermelho mais escuro no hover */
+}
+
+@media (min-width: 1080px) {
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Absolut', sans-serif;
+        background-image: url("Background/background_v4.png");
+        background-repeat: repeat;
+        color: #f0f0f0;
+        scroll-behavior: smooth;
+        width: 100%;
+        overflow-x: hidden; /* <-- ADICIONE: Impede a rolagem horizontal */
+
+
+    }
+
+    /* --- Header / Navbar --- */
+    .hamburger { display: none; }
+    .menu {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        background: transparent;
+        width: auto;
+        padding: 0;
+    }
+    .menu a { padding: 8px 12px; }
+    .video-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; 
+        height: 0;
+        overflow: hidden;
+        display: none;
+    }
+    .video_demolimpiadas{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+    }
+
+    /* --- Hero Banner --- */
+    .crop {
+        position: relative;
+        padding-bottom: 0;
+    }
+    .titulo-rep-demoro {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 100%;
+        color: #101010;
+        font-size: 2.5vw;
+        text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
+    }
+    .titulo-rep-demoro span { display: inline; }
+
+    /* --- Seções de Eventos --- */
+    .sobre-torneio-interrep, .sobre-a-festa {
+        flex-direction: row;
+        max-width: 100%;
+        margin: 40px auto;
+        align-items: center;
+        gap: 30px;
+    }
+    .conteudo-texto {
+        flex: 1 1 100%;
+        order: 2;
+    }
+    .fotos-interrep {
+        flex: 1 1 100%;
+        order: 1;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .conteudo-texto-festa {
+        flex: 1 1 100%;
+        order: 1;
+    }
+    .fotos-a-festa {
+        flex: 1 1 100%;
+        order: 2;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center; 
+        gap:0;
+    }
+
+    
+    .texto-torneio-interrep{
+        font-size: clamp(18px, 1.2vw, 21px); /* Fonte maior para desktop */
+        text-align: right;
+    }
+    .texto-a-festa {
+        font-size: clamp(18px, 1.2vw, 21px); /* Fonte maior para desktop */
+        text-align: left;
+    }
+
+    /* Grids de fotos no desktop */
+    .fotos-interrep figure {
+        flex: 1 1 calc(50% - 8px); /* De 4 para 2 colunas (fotos maiores) */
+    }
+    .fotos-a-festa figure {
+        flex: 1 1 calc(50% - 8px); /* Grid de 2 colunas */
+    }
+
+    /* --- Churrasco dos Pais --- */
+    .sobre-churras-dos-pais {
+        position: relative; /* Mantém o contexto para o conteúdo flutuante */
+        color: white;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .background-churras-pais img {
+        display: block;
+        width: 100%;
+        height: 85vh; /* Define a altura da seção com base na altura da tela */
+        object-fit: cover;
+    }
+
+    /* CORREÇÃO: O gradiente foi adicionado de volta à sobreposição */
+    .background-churras-pais::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: 2;
+    }
+
+    .conteudo-churras-pais {
+        position: absolute;
+        z-index: 3;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        padding: 0;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+
+    /* CORREÇÃO: Regra unificada para posicionar TODOS os textos */
+    .conteudo-churras-pais .titulo-churras-pais,
+    .conteudo-churras-pais .texto-churras-pais,
+    .conteudo-churras-pais .muito-mais-rep {
+        position: absolute;
+        transform: translate(-50%, -50%); /* Centraliza o elemento em suas coordenadas */
+        margin: 0;
+        width: auto;
+    }
+
+    /* CORREÇÃO: Estilos individuais e posicionamento corrigidos */
+    .conteudo-churras-pais .titulo-churras-pais {
+        font-family: 'AbsolutHeadline';
+        font-size: clamp(40px, 5vw, 70px);
+        left: 21%;
+        top: 17%;
+        text-align: left;
+    }
+
+    .conteudo-churras-pais .texto-churras-pais {
+        left: 25%;
+        top: 31.5%;
+        text-align: left;
+        max-width: 40%;
+        font-size: clamp(20px,1vw, 40px);
+    }
+
+    .conteudo-churras-pais .muito-mais-rep {
+        left: 80%;
+        top: 40%;
+        text-align: right;
+    }
+
+    .sobre-churras-ex-moradores {
+        position: relative; /* Mantém o contexto para o conteúdo flutuante */
+        color: white;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .background-churras-ex-moradores img {
+        display: block;
+        width: 100%;
+        height: 85vh; 
+        object-fit: cover;
+    }
+
+    .background-churras-ex-moradores::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: 2;
+    }
+
+    .conteudo-churras-ex-moradores {
+        position: absolute;
+        z-index: 3;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        padding: 0;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+
+    /* CORREÇÃO: Regra unificada para posicionar TODOS os textos */
+    .conteudo-churras-ex-moradores .titulo-churras-ex-moradores,
+    .conteudo-churras-ex-moradores .texto-churras-ex-moradores,
+    .conteudo-churras-ex-moradores .muito-mais-rep {
+        position: absolute;
+        transform: translate(-50%, -50%); /* Centraliza o elemento em suas coordenadas */
+        margin: 0;
+        width: auto;
+    }
+
+    /* CORREÇÃO: Estilos individuais e posicionamento corrigidos */
+    .conteudo-churras-ex-moradores .titulo-churras-ex-moradores {
+        font-family: 'AbsolutHeadline';
+        font-size: clamp(40px, 5vw, 70px);
+        left: 28.4%;
+        top: 68%;
+        text-align: left;
+    }
+
+    .conteudo-churras-ex-moradores .texto-churras-ex-moradores {
+        left: 36.5%;
+        top: 85%;
+        text-align: left;
+        max-width: 80%;
+        font-size: clamp(20px,1vw, 40px);
+    }
+
+    .conteudo-churras-ex-moradores .muito-mais-rep {
+        left: 80%;
+        top: 80%;
+        text-align: right;
+    }
+
+    
+    .conteudo-casa {
+        order: 2;
+        box-sizing: border-box;
+        text-align: center;
+        background: url('Background/white_background.png');
+        width: 300px;
+        padding: 1vw 2vw;
+        border: black;
+        cursor: pointer;
+        font-size: 2vw;
+        font-family: 'AbsolutHandwritten';
+        transition-duration: 0.4s;
+        box-shadow: #111;
+    }
+
+    .conteudo-casa:hover{
+        background: url('Background/background_v4.png');
+        color: white;
+        box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
+    }
+    
+    .cards-moradores{
+        display: flex;
+        flex-direction: row;
+        width: 90vw;   
+    }
+
+    .morador{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 40vw;
+        flex: 0.5;
+        position:relative;
+
+        cursor: pointer;
+        transition: flex 0.3s ease-in-out;
+
+    }
+    .morador figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%; 
+        text-align: center;
+        color: white;
+        font-family: 'AbsolutHandwritten', sans-serif;
+        
+        opacity: 0; 
+        transition: opacity 0.3s ease;
+        
+        background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    }
+
+    .morador.active{
+        flex: 3;
+    }
+    .morador.active figcaption{
+        opacity:1;
+        font-size: 2rem;
+    }
+
+    .page-morador{
+        background-color: white;
+        min-height: 100vh; /* Ocupa 100% da altura da tela visível */
+        width: 100%;       /* Ocupa 100% da largura */
+        
+        /* Garante que comece do topo, cobrindo tudo */
+        position: absolute; 
+        top: 0;
+        left: 0;
+        z-index: 0; /* Fica atrás do conteúdo, mas na frente do body */
+    }
+
+    .container-tarefa {
+            flex-direction: row; 
+            justify-content: center; /* Centraliza o grupo na tela */
+            align-items: center;     /* Alinha checkbox ao centro da caixa */
+    
+    }
+    
+    .tarefas{
+        display: flex;
+        justify-content: center;
+    }
+    .texto-tarefas{
+        font-family: 'AbsolutHandwritten';
+        font-size: 4vw;
+        color: #000471;
+        margin-top: 2%;
+    }
+    
+    .wrapper-tarefa {
+        flex-direction: row; 
+        justify-content: center; 
+        align-items: center;     
+    }
+
+    .box-tarefas {
+        margin-bottom: 0;
+        width: auto;     
+        min-width: 500px;
+    }
+    
+    .box-tarefas span {
+        font-size: clamp(1rem, 1vw, 1.25rem); 
+    }
+    .checkbox-tarefa{
+
+    }
+
+    .titulo-admin{
+        font-family: 'AbsolutHandwritten';
+        font-size: 3vw;
+        color:#000471; 
+    }
+
+    .pagina-admin {
+        justify-content: flex-start; /* No desktop, começa do topo */
+        padding-top: 80px; /* Compensa o header fixo */
+    }
+    
+    .hero-admin {
+        padding: 40px;
+        border: 1px solid #eee; /* Moldura suave no desktop */
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .titulo-login{
+        font-family: 'AbsolutHandwritten';
+        font-size: 3vw;
+        color:#000471; 
+    }
+
+
+
+
+}
+
+@media (min-width: 601px) and (min-width < 1080){
+    
+    /* --- Typography Adjustments --- */
+    .titulo-rep-demoro {
+        font-size: clamp(24px, 6vw, 36px);
+    }
+    
+    .titulo-sobre-nos {
+        font-size: clamp(24px, 6vw, 36px);
+    }
+    
+    .titulo-nossos-eventos {
+        font-size: clamp(28px, 6vw, 40px);
+    }
+    
+    /* --- Events Section --- */
+    .sobre-torneio-interrep, .sobre-a-festa {
+        flex-direction: column;
+        padding: 0 30px;
+        margin-bottom: 50px;
+    }
+    
+    .fotos-interrep, .fotos-a-festa {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .fotos-interrep figure, .fotos-a-festa figure {
+        flex: 1 1 calc(50% - 8px);
+        max-width: none;
+    }
+    
+    /* --- BBQ Sections --- */
+    .background-churras-pais img,
+    .background-churras-ex-moradores img {
+        height: 60vh;
+    }
+    
+    .conteudo-churras-pais .titulo-churras-pais{
+        font-size: clamp(32px, 4vw, 50px);
+        top: 15%;
+    }
+
+    .conteudo-churras-ex-moradores .titulo-churras-ex-moradores {
+        font-size: clamp(32px, 4vw, 50px);
+        top: 15%;
+    }
+
+        
+    .conteudo-churras-ex-moradores .texto-churras-ex-moradores {
+        font-size: 20px;
+        max-width: 700px;
+        margin: 15px auto;
+        line-height: 1.6;
+        top: 75%;
+    }
+
+    /* --- Cards Moradores --- */
+    .cards-moradores {
+        width: 95vw;
+        flex-direction: row;
+    }
+    
+    .morador {
+        height: 35vw;
+        flex: 0.6;
+    }
+    
+    .morador.active {
+        flex: 2.5;
+    }
+    
+    .morador figcaption {
+        font-size: 1.3rem;
+    }
+    
+    /* --- Casa Section --- */
+    .sobre-casa {
+        flex-direction: row;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .conteudo-casa {
+        flex: 1 1 40%;
+        font-size: 3vw;
+    }
+    
+    .foto-casa {
+        flex: 1 1 60%;
+    }
+    
+    /* --- Admin Section --- */
+    .titulo-admin {
+        font-size: 6vw;
+    }
+    
+    .box-tarefas {
+        min-width: 400px;
+        width: 80%;
+    }
+    
+    .form-admin {
+        max-width: 500px;
+    }
+    
+    /* --- Login --- */
+    .titulo-login {
+        font-size: 7vw;
+    }
+    
+    .formulario-login {
+        max-width: 350px;
+    }
+}

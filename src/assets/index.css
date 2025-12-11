@@ -1,0 +1,10 @@
+.fundo-index{
+    background-color: whitesmoke;
+}
+
+@font-face { font-family: 'AbsolutHeadline'; src: url('fonts/absolut-headline.woff2') format('woff2'); }
+@font-face { font-family: 'Absolut'; src: url('fonts/absolut-regular.woff') format('woff'); }
+@font-face { font-family: 'AbsolutHandwritten'; src: url('fonts/absolut-handwritten-regular.woff') format('woff'); }
+@font-face { font-family: "EdwardianScript"; src: url("fonts/Edwardian Script ITC V1.woff2") format("woff2"); }
+
+
