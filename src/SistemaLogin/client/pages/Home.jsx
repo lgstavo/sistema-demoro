@@ -116,7 +116,7 @@ function Home() {
 
             <div className="sobre-churras-dos-pais">
               <div className="background-churras-pais">
-                <img src="./public/FOTOS_CHURRAS_PAIS/FOTO_CHURRAS_PAIS.jpeg" alt="Foto do Churrasco dos Pais" />
+                <img src="/FOTOS_CHURRAS_PAIS/FOTO_CHURRAS_PAIS.jpeg" alt="Foto do Churrasco dos Pais" />
               </div>
 
               <div className="conteudo-churras-pais">
