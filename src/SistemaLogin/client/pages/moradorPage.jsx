@@ -19,7 +19,7 @@ function MoradorPage (){
         <div className="page-morador">
             <header className="barra_cima">
                 <a href="#" className="logo-row">
-                    <img className="logo" src="images/Logos/LOGO_DEMORO_SITE.png" alt="Logo Demorô" />
+                    <img className="logo" src="/Logos/LOGO_DEMORO_SITE.png" alt="Logo Demorô" />
                 </a>
 
                 <div 
