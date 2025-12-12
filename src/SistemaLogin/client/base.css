@@ -418,7 +418,7 @@ font-size: clamp(32px, 8vw, 50px);
 .conteudo-casa {
     order: 2;
     text-align: center;
-    background: url('/Background/white_background.png');
+    background: url('/public/Background/white_background.png');
     flex: 1 1 50%;
     padding: 1vw 2vw;
     border: black;
