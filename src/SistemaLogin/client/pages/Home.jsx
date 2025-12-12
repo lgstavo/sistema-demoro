@@ -83,16 +83,16 @@ function Home() {
             <FadeIn>
               <div className="sobre-torneio-interrep">
                 <div className="conteudo-texto">
-                  <img className="logo-torneio-interrep" src="images/Logos/Logo_InterREP.png" alt="Logo InterREP" />
+                  <img className="logo-torneio-interrep" src="/images/Logos/Logo_InterREP.png" alt="Logo InterREP" />
                   <p className="texto-torneio-interrep">
                     Organizado desde 2005, o Torneio InterREP se trata da maior competição entre Repúblicas de São Carlos. Organizada anualmente por nós, atualmente estamos na XIX Edição do Torneio, que conta com mais de 80 Repúblicas e 750 Atletas, o InterREP se divide em diversas áreas, como Marketing, Financeiro, Patrocínios, Operacional e Presidência.
                   </p>
                 </div>
                 <div className="fotos-interrep">
-                  <figure><img src="Fotos_InterREP/Fotos Final 2/FOTO_DTV.jpg" alt="Foto DTV" /></figure>
-                  <figure><img src="Fotos_InterREP/Fotos Final 2/FOTO_TROFEU.jpg" alt="Foto TROFEU" /></figure>
-                  <figure><img src="Fotos_InterREP/Fotos Final 2/FOTO_BORA_BORA.jpg" alt="Foto Bora Bora" /></figure>
-                  <figure><img src="Fotos_InterREP/Fotos Final 2/FOTO_ARTILHEIRO.jpg" alt="Foto Artilheiro" /></figure>
+                  <figure><img src="/Fotos_InterREP/Fotos Final 2/FOTO_DTV.jpg" alt="Foto DTV" /></figure>
+                  <figure><img src="/Fotos_InterREP/Fotos Final 2/FOTO_TROFEU.jpg" alt="Foto TROFEU" /></figure>
+                  <figure><img src="/Fotos_InterREP/Fotos Final 2/FOTO_BORA_BORA.jpg" alt="Foto Bora Bora" /></figure>
+                  <figure><img src="/Fotos_InterREP/Fotos Final 2/FOTO_ARTILHEIRO.jpg" alt="Foto Artilheiro" /></figure>
                 </div>
               </div>
             </FadeIn>
