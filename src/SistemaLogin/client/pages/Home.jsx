@@ -19,7 +19,7 @@ function Home() {
       <div>
         <header className="barra_cima">
           <a href="#" class="logo-row">
-            <img className="logo" src="images/Logos/LOGO_DEMORO_SITE.png" alt="Logo Demorô" />
+            <img className="logo" src="/images/Logos/LOGO_DEMORO_SITE.png" alt="Logo Demorô" />
           </a>
 
           <nav className={`menu ${menuAtivo ? 'active' : ''}`}>

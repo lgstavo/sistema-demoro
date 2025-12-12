@@ -49,7 +49,7 @@ const Register = () => {
       {/* Header opcional se quiser a barra em cima */}
       <header className="barra_cima">
           <div className="logo-row">
-            <img className="logo" src="images/Logos/LOGO_DEMORO_SITE.png" alt="Logo Demorô" />
+            <img className="logo" src="/images/Logos/LOGO_DEMORO_SITE.png" alt="Logo Demorô" />
           </div>
       </header>
 

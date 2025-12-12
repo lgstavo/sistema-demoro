@@ -47,7 +47,7 @@ const Login = () => {
         <header className="barra_cima">
           <div className="logo-row">
              {/* Ajuste o caminho da imagem se necessário */}
-            <img className="logo" src="images/Logos/LOGO_DEMORO_SITE.png" alt="Logo Demorô" />
+            <img className="logo" src="/images/Logos/LOGO_DEMORO_SITE.png" alt="Logo Demorô" />
           </div>
         </header>
 

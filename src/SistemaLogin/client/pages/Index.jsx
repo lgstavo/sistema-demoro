@@ -11,7 +11,7 @@ const Index = () => {
         {/* Barra de cima (certifique-se que ela tenha z-index alto no CSS) */}
         <header className="barra_cima" style={{ position: 'relative', zIndex: 10 }}>
           <a href="#" className="logo-row">
-            <img className="logo" src="images/Logos/LOGO_DEMORO_SITE.png" alt="Logo Demorô" />
+            <img className="logo" src="/images/Logos/LOGO_DEMORO_SITE.png" alt="Logo Demorô" />
           </a>
         </header>
 
