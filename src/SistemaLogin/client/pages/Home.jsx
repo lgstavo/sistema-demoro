@@ -1,63 +1,88 @@
-// Arquivo: src/Home.jsx
+// Arquivo: src/pages/Home.jsx
 
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Importante para navegar
 import '../base.css';
-import '../data.js';
 import FadeIn from '../components/FadeIn.jsx';
-import Card from '../components/Card.jsx'
 import MoradoresCards from '../components/MoradoresCards.jsx';
-import { listaMoradores } from '../data.js';
-
+import { listaMoradores } from '../data.js'; // Certifique-se que esse arquivo existe ou use o do banco
 
 function Home() {
     const [menuAtivo, setMenuAtivo] = useState(false);
+    const navigate = useNavigate(); // Hook para mudar de página
 
-    // Função para fechar o menu ao clicar em um link
+    // Função para fechar o menu ao clicar
     const fecharMenu = () => setMenuAtivo(false);
+
+    // Função para rolar até a seção
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+        fecharMenu();
+    };
 
     return (
       <div>
         <header className="barra_cima">
-          <a href="#" class="logo-row">
+          <div className="logo-row">
             <img className="logo" src="/images/Logos/LOGO_DEMORO_SITE.png" alt="Logo Demorô" />
-          </a>
+          </div>
 
           <nav className={`menu ${menuAtivo ? 'active' : ''}`}>
-            <a href="#sobre-nos" onClick={fecharMenu}>Sobre Nós</a>
-            <a href="#eventos" onClick={fecharMenu}>Eventos</a>
-            <a href="#moradores" onClick={fecharMenu}>Moradores</a>
-            <a href="casa.html">Nossa Casa</a>
+            <button onClick={() => scrollToSection('hero')} style={{background:'none', border:'none', color:'white', fontSize:'1.2rem', cursor:'pointer'}}>Início</button>
+            <button onClick={() => scrollToSection('sobre-nos')} style={{background:'none', border:'none', color:'white', fontSize:'1.2rem', cursor:'pointer'}}>Sobre Nós</button>
+            <button onClick={() => scrollToSection('eventos')} style={{background:'none', border:'none', color:'white', fontSize:'1.2rem', cursor:'pointer'}}>Eventos</button>
+            <button onClick={() => scrollToSection('moradores')} style={{background:'none', border:'none', color:'white', fontSize:'1.2rem', cursor:'pointer'}}>Moradores</button>
+            {/* Link direto para Login no menu também */}
+            <button onClick={() => navigate('/login')} style={{background:'none', border:'none', color:'#1c21b8', fontWeight:'bold', fontSize:'1.2rem', cursor:'pointer'}}>Login</button>
           </nav>
 
           <div 
             className={`hamburger ${menuAtivo ? 'active' : ''}`} 
             onClick={() => setMenuAtivo(!menuAtivo)}
           >
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </header>
 
         <main>
-          <section className="crop">
+          <section className="crop" id="hero">
+            {/* Vídeo apenas desktop (controlado pelo CSS) */}
             <div className="video-container">
               <iframe
-                src="https://www.youtube.com/embed/ZyaM1rqH4c8?autoplay=1&mute=1&playsinline=1"
+                src="https://www.youtube.com/embed/ZyaM1rqH4c8?autoplay=1&mute=1&playsinline=1&loop=1&playlist=ZyaM1rqH4c8"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               ></iframe>
             </div>
+            
+            {/* Imagem Mobile (controlado pelo CSS) */}
             <img 
               className="foto_churrasco_ex" 
-              src="FOTO_REENCONTRO/foto_churrasco_ex_cortada.png" 
+              src="/FOTO_REENCONTRO/foto_churrasco_ex_cortada.png" 
               alt="Foto do churrasco da república" 
-              id="rep_section" 
             />
 
-            <span className="titulo-rep-demoro">
+            {/* Texto + Botões de Ação */}
+            <div className="titulo-rep-demoro">
               <span className="fonte-sobre">Aprecie a Graduação,</span>
               <span className="fonte-nos">Deguste a Faculdade.</span>
-              <span className="fonte-moderacao">(Sem Moderação)</span>
-            </span>
+              
+              {/* OS BOTÕES IMPORTANTES AQUI */}
+              <div className="container-botao">
+                  <button onClick={() => scrollToSection('sobre-nos')} className="botao-conhecer">
+                      Conheça a Demorô!
+                  </button>
+                  <button onClick={() => navigate('/login')} className="botao-morador">
+                      Área do Morador
+                  </button>
+              </div>
+            </div>
           </section>
 
           <section id="sobre-nos" className="sobre-nos-section">
@@ -83,16 +108,14 @@ function Home() {
             <FadeIn>
               <div className="sobre-torneio-interrep">
                 <div className="conteudo-texto">
-                  <img className="logo-torneio-interrep" src="images/Logos/Logo_InterREP.png" alt="Logo InterREP" />
+                  <img className="logo-torneio-interrep" src="/images/Logos/Logo_InterREP.png" alt="Logo InterREP" />
                   <p className="texto-torneio-interrep">
-                    Organizado desde 2005, o Torneio InterREP se trata da maior competição entre Repúblicas de São Carlos. Organizada anualmente por nós, atualmente estamos na XIX Edição do Torneio, que conta com mais de 80 Repúblicas e 750 Atletas, o InterREP se divide em diversas áreas, como Marketing, Financeiro, Patrocínios, Operacional e Presidência.
+                    Organizado desde 2005, o Torneio InterREP se trata da maior competição entre Repúblicas de São Carlos. Organizada anualmente por nós, atualmente estamos na XIX Edição do Torneio, que conta com mais de 80 Repúblicas e 750 Atletas.
                   </p>
                 </div>
                 <div className="fotos-interrep">
-                  <figure><img src="Fotos_InterREP/Fotos Final 2/FOTO_DTV.jpg" alt="Foto DTV" /></figure>
-                  <figure><img src="Fotos_InterREP/Fotos Final 2/FOTO_TROFEU.jpg" alt="Foto TROFEU" /></figure>
-                  <figure><img src="Fotos_InterREP/Fotos Final 2/FOTO_BORA_BORA.jpg" alt="Foto Bora Bora" /></figure>
-                  <figure><img src="Fotos_InterREP/Fotos Final 2/FOTO_ARTILHEIRO.jpg" alt="Foto Artilheiro" /></figure>
+                  <figure><img src="/Fotos_InterREP/Fotos Final 2/FOTO_DTV.jpg" alt="Foto DTV" /></figure>
+                  <figure><img src="/Fotos_InterREP/Fotos Final 2/FOTO_TROFEU.jpg" alt="Foto TROFEU" /></figure>
                 </div>
               </div>
             </FadeIn>
@@ -100,29 +123,26 @@ function Home() {
             <FadeIn>
               <div className="sobre-a-festa">
                 <div className="conteudo-texto-festa">
-                  <img className="logo-a-festa" src="images/Logos/LOGO_INTERREP_A_FESTA.png" alt="Logo InterREP A FESTA" />
+                  <img className="logo-a-festa" src="/images/Logos/LOGO_INTERREP_A_FESTA.png" alt="Logo InterREP A FESTA" />
                   <p className="texto-a-festa">
-                    Ao final do Torneio, sempre organizamos um evento de finalização do campeonato. O InterREP - A Festa se trata de um momento de comemoração, feito tanto para os ganhadores da competição, quanto feito para nós mesmos, com o objetivo de comemorarmos a finalização de um torneio trabalhoso para nós. Na última edição, contamos com a participação de 300 pessoas, com direito a entrega dos troféus para os campeões num clima perfeito de tardezinha, cerveja e piscina.
+                    Ao final do Torneio, sempre organizamos um evento de finalização do campeonato. O InterREP - A Festa se trata de um momento de comemoração...
                   </p>
                 </div>
                 <div className="fotos-a-festa">
-                  <figure><img src="Fotos InterREP A Festa/PLACA.jpeg" alt="Foto Placa" /></figure>
-                  <figure><img src="Fotos InterREP A Festa/DTV.jpeg" alt="Foto DTV" /></figure>
-                  <figure><img src="Fotos InterREP A Festa/VDN.jpeg" alt="Foto VDN" /></figure>
-                  <figure><img src="Fotos InterREP A Festa/TPD.jpeg" alt="Foto TPD" /></figure>
+                  <figure><img src="/Fotos InterREP A Festa/PLACA.jpeg" alt="Foto Placa" /></figure>
+                  <figure><img src="/Fotos InterREP A Festa/DTV.jpeg" alt="Foto DTV" /></figure>
                 </div>
               </div>
             </FadeIn>
 
             <div className="sobre-churras-dos-pais">
               <div className="background-churras-pais">
-                <img src="FOTOS_CHURRAS_PAIS/FOTO_CHURRAS_PAIS.jpeg" alt="Foto do Churrasco dos Pais" />
+                <img src="/FOTOS_CHURRAS_PAIS/FOTO_CHURRAS_PAIS.jpeg" alt="Foto do Churrasco dos Pais" />
               </div>
-
               <div className="conteudo-churras-pais">
                 <p className="titulo-churras-pais">Churrasco dos Pais</p>
                 <p className="texto-churras-pais">
-                  Muito mais que uma República, a Demorô também é uma família. Por isso, todo ano organizamos nosso Churrasco de Pais aqui! Com a presença dos pais dos moradores, esse é um momento de extrema importância entre nós, estreitando os laços entre nossas famílias e nossa República!
+                  Muito mais que uma República, a Demorô também é uma família...
                 </p>
                 <p className="muito-mais-rep">Muito mais que uma República</p>
               </div>
@@ -130,38 +150,36 @@ function Home() {
 
             <div className="sobre-churras-ex-moradores">
               <div className="background-churras-ex-moradores">
-                <img src="FOTO_REENCONTRO/foto_churrasco_ex.jpeg" alt="Foto do nosso Reencontro 2025" />
+                <img src="/FOTO_REENCONTRO/foto_churrasco_ex.jpeg" alt="Foto do nosso Reencontro 2025" />
               </div>
-
               <div className="conteudo-churras-ex-moradores">
-                <p className="titulo-churras-ex-moradores">Churrasco de Ex-Moradores</p>
+                <p className="titulo-churras-ex-moradores">Reencontro de Ex-Moradores</p>
                 <p className="texto-churras-ex-moradores">
-                  Anualmente, realizamos nosso tradicional Reencontro de Ex-Moradores. Aqui é onde percebemos a importância e a história da nossa República.<br />
-                  Compartilhando experiências, conhecendo melhor quem nós somos, nosso legado e como surgimos, nosso Reencontro é um momento extremamente especial e fundamental para nossa formação como Demorônios.<br />
-                  Regado à chopp, churrasco de alta qualidade e muita resenha, definitivamente é uma oportunidade única na vida de um universitário.
+                  Anualmente, realizamos nosso tradicional Reencontro...
                 </p>
                 <p className="muito-mais-rep">Uma família</p>
               </div>
             </div>
           </section>
 
-          
-
           <section id="moradores" className="moradores">
             <div className="titulo-moradores"><span>Moradores</span></div>
-            {<MoradoresCards data={listaMoradores}/>}
-            
+            <MoradoresCards data={listaMoradores}/>
           </section>
 
           <section id="casa" className="casa-section">
             <FadeIn>
               <p className="titulo-nossa-casa">
-                Nossa Casa
+                Quer fazer parte?
               </p>
               <div className="sobre-casa">
-                <button onClick={() => window.location.href = 'casa.html'} className="conteudo-casa">
-                  Ficou curioso? Clique aqui!
+                {/* Redireciona para Cadastro */}
+                <button onClick={() => navigate('/register')} className="conteudo-casa">
+                  Inscreva-se no Processo Seletivo!
                 </button>
+                <div className="foto-casa">
+                     {/* Adicione uma foto da casa aqui se tiver, ou deixe vazio */}
+                </div>
               </div>
             </FadeIn>
           </section>
@@ -169,6 +187,6 @@ function Home() {
         </main>
       </div>
     );
-  }
+}
 
-  export default Home;
+export default Home;
