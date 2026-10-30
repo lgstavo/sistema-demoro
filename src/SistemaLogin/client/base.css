@@ -1,6 +1,44 @@
 /* =============================================
 1. ESTILOS GERAIS E FONTES
 ============================================= */
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #7c3aed;
+  --font-display: "AbsolutHeadline", sans-serif;
+  --font-headline: "AbsolutHeadline";
+  --font-handwritten: "AbsolutHandwritten";
+  --font-regular: "Absolut";
+
+  --text-rotulo: clamp(0.6875rem, 0.85vw, 0.8125rem);
+  --text-titulo-secao: clamp(2rem, 7vw, 3rem);
+  --text-titulo-churras: clamp(2rem, 6vw, 4.375rem);
+  --text-churras: clamp(1rem, 1.3vw, 1.375rem);
+  --text-assinatura: clamp(1.75rem, 5vw, 3rem);
+
+  --animate-scroll: scroll 42s linear infinite;
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 8px));
+    }
+  }
+}
+
+@layer components {
+  .fade-in-element {
+    @apply opacity-0 translate-y-[30px] transition-[opacity,translate] duration-[600ms] ease-out;
+    @apply motion-reduce:opacity-100 motion-reduce:translate-y-0 motion-reduce:transition-none;
+  }
+
+  .fade-in-element.is-visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+
+
+
 
 html, body {
     margin: 0;
@@ -14,6 +52,7 @@ html, body {
 
 
 }
+
 
 body {
     padding-top: 40px;
@@ -67,12 +106,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.logo {
-    height: 24px; 
-    width: auto; 
-    margin-bottom: 2px;
 }
 
 .menu {
@@ -476,75 +509,6 @@ transform: translateY(0);
 .texto-universidade .fonte-vida { font-family: 'AbsolutHeadline'; }
 .texto-universidade .fonte-universitaria { font-family: 'AbsolutHandwritten'; }
 /* --- Container Principal (Opcional, para dar espaço) --- */
-.hero-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;  
-}
-
-/* --- Texto --- */
-.container-text-index {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.texto-universidade {
-    margin: 0;
-}
-
-.texto-universidade span { 
-    display: block;
-    color: #1c1cb8;
-    font-size: 5vw;
-    line-height: 1.2;
-}
-
-
-.container-botao {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;       
-    width: 100%;
-    margin-top: 30px;
-}
-
-.botao-conhecer{
-    background-color: #1c21b8; 
-    color: white;
-    border: none;
-    
-    padding: 20px 60px;     
-    font-size: 1.5rem;
-    
-    cursor: pointer;
-    transition: transform 0.2s;
-    font-family: 'Absolut';
-} 
-.botao-morador {
-    background-color: transparent; 
-    border: 2px solid #1c21b8;
-    color: #1c21b8; 
-    
-    padding: 10px 30px;
-    font-size: 1rem;
-    
-    cursor: pointer;
-    transition: all 0.3s;
-    font-family: 'Absolut';
-}
-
-/* Efeito Hover (Opcional: muda cor ao passar o mouse) */
-.botao-conhecer:hover{
-    transform: scale(1.05); 
-    background-color: #000471;
-}
-.botao-morador:hover {
-background-color: #f0f0f0;
-}
 
 
 

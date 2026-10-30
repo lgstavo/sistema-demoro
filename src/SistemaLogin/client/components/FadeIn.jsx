@@ -35,5 +35,4 @@ const FadeIn = ({ children }) => {
   );
 };
 
-// AQUI ESTÁ A EXPORTAÇÃO PADRÃO
 export default FadeIn;
