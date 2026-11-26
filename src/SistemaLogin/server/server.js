@@ -15,7 +15,7 @@ const dbURI = `mongodb+srv://${username}:${password}@cluster0.5pzblig.mongodb.ne
 
 app.use(cors());
 app.use(express.json());
-
+    
 app.use('/auth', authRoutes);
 app.use('/tarefas', tarefasRoutes);
 

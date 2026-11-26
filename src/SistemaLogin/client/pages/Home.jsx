@@ -5,7 +5,7 @@ import Card from '../components/Card.jsx'
 import MoradoresCards from '../components/MoradoresCards.jsx';
 import { listaMoradores } from '../data.js';
 import Header from '../components/Header.jsx';
-import InterrepGallery from '../components/InterrepGallery.jsx';
+import Gallery from '../components/Gallery.jsx';
 import { Link } from 'react-router-dom';
 
 function Home() {
@@ -25,7 +25,7 @@ function Home() {
             <a href="#eventos" onClick={fecharMenu}>EVENTOS</a>
             <a href="#moradores" onClick={fecharMenu}>MORADORES</a>
             <a href="#casa" onClick={fecharMenu}>NOSSA CASA</a>
-            <Link to="/login" onClick={fecharMenu} className="text-azul-demoro">ÁREA DO MORADOR</Link>
+            <Link to="/login" onClick={fecharMenu} className="text-azul-demoro bg-white hover:text-white">ÁREA DO MORADOR</Link>
           </nav>
 
           <button
@@ -104,7 +104,7 @@ function Home() {
                 </p>
               </div>
               <div className="min-w-0 md:flex-[1_1_50%]">
-                <InterrepGallery type='Interrep'/>
+                <Gallery type='interrep'/>
               </div>
             </div>
           </FadeIn>
@@ -118,7 +118,7 @@ function Home() {
                 </p>
               </div>
               <div className="min-w-0 md:flex-[1_1_50%]">
-                <InterrepGallery type='Festa'/>
+                <Gallery type='festa'/>
               </div>
             </div>
           </FadeIn>
