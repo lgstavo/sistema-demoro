@@ -10,7 +10,7 @@ const MoradoresCards = ({ data }) => {
   }
 
   return ( 
-    <div className="cards-moradores">
+    <div className="flex flex-col width-80 gap-x-[30px] md:flex-row md:w-95 lg:flex lg:flex-row lg:w-[90vw]">
       {data.map((morador) => (
         <Card 
           key={morador.id} 
