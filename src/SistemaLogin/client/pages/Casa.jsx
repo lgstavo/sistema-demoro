@@ -79,8 +79,8 @@ function Casa() {
             alt="Foto da fachada da casa"
             fetchPriority="high"
           />
-            <div className="px-6 pt-10 pb-16 text-white lg:text-black overflow-x-clip text-left md:absolute md:inset-x-0 md:bottom-0 md:px-10 md:pt-25 md:pb-12 md:bg-linear-to-t md:from-black/82 md:to-transparent lg:px-16 lg:pt-35 lg:pb-16">
-              <h1 className="text-[clamp(1.75rem,0.5rem_+_5.5vw,7.25rem)] leading-[1.1] text-[#f0f0f0]">
+            <div className="px-6 pt-10 pb-1 text-black lg:text-white overflow-x-clip text-left md:absolute md:inset-x-0 md:bottom-0 md:px-10 md:pt-25 md:pb-12 md:bg-linear-to-t md:from-black/82 md:to-transparent lg:px-16 lg:pt-35 lg:pb-16">
+              <h1 className="text-[clamp(1.75rem,0.5rem_+_5.5vw,7.25rem)] leading-[1.1]">
                 <FadeIn direcao="x">
                   <span className="block font-handwritten">NOSSA CASA</span>
                 </FadeIn>
