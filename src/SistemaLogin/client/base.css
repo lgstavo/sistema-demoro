@@ -72,7 +72,7 @@
 .barra_cima {
     width: 100%;
     height: 30px;
-    background: url("BARRA_CIMA.avif") center/cover no-repeat;
+    background: url("/BARRA_CIMA.avif") center/cover no-repeat;
     position: fixed;
     top: 0;
     left: 0;
@@ -377,7 +377,7 @@ font-size: clamp(32px, 8vw, 50px);
 .conteudo-casa {
     order: 2;
     text-align: center;
-    background: url('/Background/white_background.png');
+    background: url('/Background/white_background.webp');
     flex: 1 1 50%;
     padding: 1vw 2vw;
     border: black;
@@ -388,7 +388,7 @@ font-size: clamp(32px, 8vw, 50px);
 }
 
 .conteudo-casa:hover{
-    background: url('/Background/background_v4.png');
+    background: url('/Background/background_v4.webp');
     color: white;
     box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
 }

@@ -54,7 +54,7 @@ function Home() {
 
           <img
             className="block w-full h-auto aspect-[4/3] object-cover md:aspect-auto"
-            src="/FOTO_REENCONTRO/foto_churrasco_ex_cortada.png"
+            src="/FOTO_REENCONTRO/foto_churrasco_ex_cortada.webp"
             alt="Foto do churrasco da república"
             id="rep_section"
           />
@@ -98,7 +98,7 @@ function Home() {
           <FadeIn>
             <div className="flex flex-col gap-6 mb-10 md:flex-row md:items-center md:max-w-[min(86%,64rem)] md:my-[6%] md:mx-auto lg:my-[5%] lg:gap-10">
               <div className="px-6 text-center md:order-2 md:flex-[1_1_50%] md:px-0">
-                <img className="mx-auto mb-4 max-w-[150px] md:mx-0 md:max-w-[170px] lg:max-w-[190px]" src="/images/Logos/Logo_InterREP.png" alt="Logo InterREP" />
+                <img className="mx-auto mb-4 max-w-[150px] md:mx-0 md:max-w-[170px] lg:max-w-[190px]" src="/images/Logos/Logo_InterREP.webp" alt="Logo InterREP" />
                 <p className="mx-auto max-w-[64ch] text-[clamp(1rem,4vw,1.125rem)] leading-[1.6] text-[#e0e0e0] md:text-left md:text-[clamp(1rem,1.6vw,1.125rem)] lg:text-[clamp(1rem,1.2vw,1.3125rem)]">
                   Organizado desde 2005, o Torneio InterREP se trata da maior competição entre Repúblicas de São Carlos. Organizada anualmente por nós, atualmente estamos na XIX Edição do Torneio, que conta com mais de 80 Repúblicas e 750 Atletas, o InterREP se divide em diversas áreas, como Marketing, Financeiro, Patrocínios, Operacional e Presidência.
                 </p>
@@ -112,7 +112,7 @@ function Home() {
           <FadeIn>
             <div className="flex flex-col gap-6 mb-10 md:flex-row md:items-center md:max-w-[min(86%,64rem)] md:my-[6%] md:mx-auto lg:my-[5%] lg:gap-10">
               <div className="px-6 text-center md:flex-[1_1_50%] md:px-0">
-                <img className="mx-auto mb-4 max-w-[150px] md:mx-0 md:max-w-[170px] lg:max-w-[190px]" src="/images/Logos/LOGO_INTERREP_A_FESTA.png" alt="Logo InterREP A FESTA" />
+                <img className="mx-auto mb-4 max-w-[150px] md:mx-0 md:max-w-[170px] lg:max-w-[190px]" src="/images/Logos/LOGO_INTERREP_A_FESTA.webp" alt="Logo InterREP A FESTA" />
                 <p className="mx-auto max-w-[64ch] text-[clamp(1rem,4vw,1.125rem)] leading-[1.6] text-[#e0e0e0] md:text-left md:text-[clamp(1rem,1.6vw,1.125rem)] lg:text-[clamp(1rem,1.2vw,1.3125rem)]">
                   Ao final do Torneio, sempre organizamos um evento de finalização do campeonato. O InterREP - A Festa se trata de um momento de comemoração, feito tanto para os ganhadores da competição, quanto feito para nós mesmos, com o objetivo de comemorarmos a finalização de um torneio trabalhoso para nós. Na última edição, contamos com a participação de 300 pessoas, com direito a entrega dos troféus para os campeões num clima perfeito de tardezinha, cerveja e piscina.
                 </p>
@@ -125,7 +125,7 @@ function Home() {
 
           <div className="text-center bg-white text-[#333] md:relative md:flex md:min-h-[max(70svh,420px)] md:text-white md:bg-transparent lg:min-h-[85svh]">
             <div className="md:absolute md:inset-0">
-              <img className="block w-full h-auto md:h-full md:object-cover" src="/FOTOS_CHURRAS_PAIS/FOTO_CHURRAS_PAIS.jpeg" alt="Foto do Churrasco dos Pais" />
+              <img className="block w-full h-auto md:h-full md:object-cover" src="/FOTOS_CHURRAS_PAIS/FOTO_CHURRAS_PAIS.webp" alt="Foto do Churrasco dos Pais" />
             </div>
             <div className="p-6 md:relative md:flex md:flex-col md:justify-start md:w-full md:p-12 md:bg-linear-to-b md:from-black/100 md:via-black/10 md:via-40% md:to-transparent md:[text-shadow:2px_2px_4px_rgba(0,0,0,0.7)]">
               <p className="mb-4 font-headline text-titulo-churras md:text-left">Churrasco dos Pais</p>
@@ -138,7 +138,7 @@ function Home() {
 
           <div className="text-center bg-white text-[#333] md:relative md:flex md:min-h-[max(70svh,420px)] md:text-white md:bg-transparent lg:min-h-[85svh]">
             <div className="md:absolute md:inset-0">
-              <img className="block w-full h-auto md:h-full md:object-cover" src="/FOTO_REENCONTRO/foto_churrasco_ex.jpeg" alt="Foto do nosso Reencontro 2025" />
+              <img className="block w-full h-auto md:h-full md:object-cover" src="/FOTO_REENCONTRO/foto_churrasco_ex.webp" alt="Foto do nosso Reencontro 2025" />
             </div>
 
             <div className="p-6 md:relative md:flex md:flex-col md:justify-end md:w-full md:p-12 md:bg-linear-to-t md:from-black/85 md:via-black/50 md:via-45% md:to-transparent md:[text-shadow:2px_2px_4px_rgba(0,0,0,0.7)]">
