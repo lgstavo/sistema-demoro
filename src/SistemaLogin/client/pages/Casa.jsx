@@ -75,7 +75,7 @@ function Casa() {
 
           <img
             className="block w-full h-auto"
-            src="/FOTOS_CASA/Escada%20(2)%20(2).jpg"
+            src="/FOTOS_CASA/Escada%20(2)%20(2).webp"
             alt="Foto da fachada da casa"
             fetchPriority="high"
           />
