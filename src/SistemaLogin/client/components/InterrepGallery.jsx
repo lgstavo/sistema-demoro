@@ -7,14 +7,18 @@ const photosInterrep = [
   { src: '/Fotos_InterREP/Fotos Final 2/FOTO_ARTILHEIRO.jpg', alt: 'Artilheiro do InterREP' },
 ];
 
+
 const photosFesta = [
-  { src: '/Fotos_InterREP/Fotos Final 2/FOTO_DTV.jpg', alt: 'InterREP: participantes no evento' },
-  { src: '/Fotos_InterREP/Fotos Final 2/FOTO_TROFEU.jpg', alt: 'Troféu do InterREP' },
-  { src: '/Fotos_InterREP/Fotos Final 2/FOTO_BORA_BORA.jpg', alt: 'Participantes do InterREP' },
-  { src: '/Fotos_InterREP/Fotos Final 2/FOTO_ARTILHEIRO.jpg', alt: 'Artilheiro do InterREP' },
+  { src: '/Fotos InterREP A Festa/TPD.jpeg', alt: 'TPD' },
+  { src: '/Fotos InterREP A Festa/VDN.jpeg', alt: 'VDN' },
+  { src: '/Fotos InterREP A Festa/DTV.jpeg', alt: 'DTV' },
+  { src: '/Fotos InterREP A Festa/PLACA.jpeg', alt: 'PLACA' },
 ];
 
-function InterrepGallery() {
+function InterrepGallery({type}) {
+  const photos = type === 'Festa' ? photosFesta : photosInterrep
+
+
   return (
     <div className="order-1 grid grid-cols-2 gap-2 md:flex-[1_1_50%]">
       {photos.map(({ src, alt }) => (

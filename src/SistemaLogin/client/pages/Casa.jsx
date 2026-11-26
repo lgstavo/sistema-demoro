@@ -4,7 +4,7 @@ import FadeIn from '../components/FadeIn.jsx';
 import Header from '../components/Header.jsx';
 
 /* Classes reaproveitadas (mesmas do HTML) */
-const tituloSecao = 'mx-auto max-w-6xl mb-8 uppercase text-titulo-secao leading-[1.1]';
+const tituloSecao = 'mb-8 pt-20 px-5 font-headline text-center uppercase text-titulo-secao text-black';
 const conteudoSecao = 'mx-auto max-w-6xl flex flex-col gap-7.5 md:flex-row md:items-center md:gap-10';
 const textoSecao =
   'flex flex-col gap-4 text-left text-[clamp(1rem,4vw,1.125rem)] leading-[1.6] md:flex-1 md:justify-center md:text-[clamp(1rem,1.5vw,1.25rem)]';
@@ -80,9 +80,16 @@ function Casa() {
             alt="Foto da fachada da casa"
             fetchPriority="high"
           />
-          <h1 className="mt-6 px-[15px] font-handwritten text-[clamp(1.75rem,8vw,2.5rem)] leading-[1.2] text-[#111] md:absolute md:bottom-[5%] md:w-full md:mt-0 md:text-[clamp(1.25rem,2.5vw,2.25rem)] md:text-[#101010]">
-            Nossa Casa
-          </h1>
+
+
+          
+            <div className="px-6 pt-10 pb-16 text-white text-left md:absolute md:inset-x-0 md:bottom-0 md:px-10 md:pt-25 md:pb-12 md:bg-linear-to-t md:from-black/82 md:to-transparent lg:px-16 lg:pt-35 lg:pb-16">
+              <h1 className="text-[clamp(1.75rem,0.5rem_+_5.5vw,7.25rem)] leading-[1.1] text-[#f0f0f0]">
+                <FadeIn direcao="x">
+                  <span className="block font-handwritten">NOSSA CASA</span>
+                </FadeIn>
+              </h1>
+            </div>
         </section>
 
         {/* SALA */}
@@ -92,7 +99,7 @@ function Casa() {
           </FadeIn>
           <div className={conteudoSecao}>
             <FadeIn className="w-full md:flex-[1.2]">
-              <div className={`${galeria} grid-cols-2 md:grid-cols-3`}>
+              <div className={`${galeria} grid-cols-2 md:grid-cols-2`}>
                 <Foto
                   className="col-span-full aspect-[4/3] md:col-auto md:aspect-[3/4]"
                   src="/FOTOS_CASA/foto_sala.jpeg"
@@ -102,7 +109,7 @@ function Casa() {
                 <Foto src="/FOTOS_CASA/foto_sala_recente.jpeg" alt="Sala da república, foto recente" />
               </div>
             </FadeIn>
-            <div className={textoSecao}>
+            <div className="mx-auto max-w-[64ch] text-[clamp(1rem,4vw,1.125rem)] leading-[1.6] text-black md:text-left md:text-[clamp(1rem,1.6vw,1.125rem)] lg:text-[clamp(1rem,1.2vw,1.3125rem)]">
               <p>Temos 2 salas bem espaçosas!</p>
               <p>Na sala principal, possuímos uma TV de 50 polegadas e é onde nos reunimos todos os dias para almoçarmos juntos, fazer aquela resenha e assistir a alguns filmes!</p>
               <p>Na salinha é onde tiramos um tempo para relaxar dos estudos e nos divertimos um pouco. Nela, temos mais uma TV de 45 polegadas, PS4 com inúmeros jogos e 3 sofás!</p>
@@ -116,7 +123,7 @@ function Casa() {
             <h2 className={`${tituloSecao} font-headline`}>Quartos</h2>
           </FadeIn>
           <div className={conteudoSecao}>
-            <div className={textoSecao}>
+            <div className="mx-auto max-w-[64ch] text-[clamp(1rem,4vw,1.125rem)] leading-[1.6] text-black md:text-left md:text-[clamp(1rem,1.6vw,1.125rem)] lg:text-[clamp(1rem,1.2vw,1.3125rem)]">
               <p>Nossa casa possui 8 quartos amplos, todos equipados com armários e mesas de estudo para garantir conforto e praticidade.</p>
             </div>
             <FadeIn className="w-full md:flex-[1.2]">

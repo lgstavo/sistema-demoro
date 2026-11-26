@@ -4,6 +4,7 @@ import Register from './pages/Register';
 import Home from './pages/Home';
 import Index from './pages/Index';
 import MoradorPage from './pages/moradorPage';
+import Casa from './pages/Casa';
 
 // --- FALTAVAM ESSES DOIS IMPORTS ---
 import Admin from './pages/Admin'; 
@@ -17,9 +18,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/casa" element={<Casa/>} />
         <Route path="/morador" element={<MoradorPage />} />
-        
-        {/* Agora vai funcionar pois importamos lá em cima */}
         <Route 
           path="/admin" 
           element={

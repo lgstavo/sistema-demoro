@@ -1,16 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-const FadeIn = ({ children }) => {
+const FadeIn = ({ direcao = 'y', children }) => {
   const [isVisible, setVisible] = useState(false);
   const domRef = useRef();
 
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-        }
+        setVisible(entry.isIntersecting)
       });
+    },
+    {
+      threshold: 0.25,
     });
 
     const currentElement = domRef.current;
@@ -26,10 +27,7 @@ const FadeIn = ({ children }) => {
   }, []);
 
   return (
-    <div
-      ref={domRef}
-      className={`fade-in-element ${isVisible ? 'is-visible' : ''}`}
-    >
+    <div ref={domRef} className={`fade-in-element ${direcao === 'x' ? 'eixo-x' : ''} ${isVisible ? 'is-visible' : ''}`}>
       {children}
     </div>
   );
