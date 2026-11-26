@@ -1,13 +1,13 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
-const FadeIn = ({ direcao = 'y', children }) => {
+const FadeIn = ({ direcao = 'y', className = '', children }) => {
   const [isVisible, setVisible] = useState(false);
   const domRef = useRef();
 
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        setVisible(entry.isIntersecting)
+        setVisible(entry.isIntersecting);
       });
     },
     {
@@ -27,8 +27,10 @@ const FadeIn = ({ direcao = 'y', children }) => {
   }, []);
 
   return (
-    <div ref={domRef} className={`fade-in-element ${direcao === 'x' ? 'eixo-x' : ''} ${isVisible ? 'is-visible' : ''}`}>
-      {children}
+    <div ref={domRef} className={className}>
+      <div className={`fade-in-element ${direcao === 'x' ? 'eixo-x' : ''} ${isVisible ? 'is-visible' : ''}`}>
+        {children}
+      </div>
     </div>
   );
 };
