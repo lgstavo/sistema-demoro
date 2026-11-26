@@ -45,7 +45,7 @@ function Home() {
         <section className="relative bg-black">
 
           <iframe
-            className="block w-full aspect-video md:hidden"
+            className="block w-full h-full aspect-video md:hidden"
             src="https://www.youtube.com/embed/ZyaM1rqH4c8?autoplay=1&mute=1&playsinline=1"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
