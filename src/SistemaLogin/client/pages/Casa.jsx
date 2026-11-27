@@ -4,28 +4,6 @@ import FadeIn from '../components/FadeIn.jsx';
 import Header from '../components/Header.jsx';
 import Gallery from '../components/Gallery.jsx';
 
-/* Classes reaproveitadas (mesmas do HTML) */
-const tituloSecao = 'mb-8 pt-20 px-5 font-headline text-center uppercase text-titulo-secao text-black';
-const conteudoSecao = 'mx-auto max-w-6xl flex flex-col gap-7.5 md:flex-row md:items-center md:gap-10';
-const textoSecao =
-  'flex flex-col gap-4 text-left text-[clamp(1rem,4vw,1.125rem)] leading-[1.6] md:flex-1 md:justify-center md:text-[clamp(1rem,1.5vw,1.25rem)]';
-const galeria = 'grid gap-2 w-full md:flex-[1.2]';
-
-/* Equivalente ao .foto-galeria do HTML */
-function Foto({ src, alt, className = '', imgClassName = '' }) {
-  return (
-    <figure className={`group aspect-[3/4] overflow-hidden ${className}`}>
-      <img
-        className={`block size-full object-cover transition-[filter,scale] duration-[400ms,600ms] [@media(hover:hover)]:grayscale-[0.35] group-hover:grayscale-0 motion-safe:group-hover:scale-[1.04] motion-reduce:transition-none ${imgClassName}`}
-        src={src}
-        alt={alt}
-        loading="lazy"
-        decoding="async"
-      />
-    </figure>
-  );
-}
-
 function Casa() {
   const [menuAtivo, setMenuAtivo] = useState(false);
   const fecharMenu = () => setMenuAtivo(false);

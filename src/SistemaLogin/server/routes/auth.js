@@ -3,10 +3,8 @@ const router = express.Router();
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
-// Importe o seu Model corretamente
 const User = require('../models/User.js');
 
-// ROTA DE REGISTRO
 router.post('/register', async (req, res) => {
     
     const { name, email, password, confirmPassword } = req.body;

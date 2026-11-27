@@ -44,7 +44,6 @@ const Login = () => {
       navigate('/morador');
 
     } catch (error) {
-      console.log(error);
       setErro(error.response?.data?.msg || 'E-mail ou senha inválidos.');
     }
   };
